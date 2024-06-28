@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to ASCII Art</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        #canvas, #asciiCanvas {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            background-color: #fff;
+            display: none; /* Hide the canvas initially */
+        }
+        #asciiArtContainer {
+            width: 100%;
+            max-width: 800px;
+            overflow: auto;
+            white-space: pre;
+            font-family: monospace;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #controls button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        #controls button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image to ASCII Art</h1>
+    <div id="controls">
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="toggleCanvas">Toggle Canvas View</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <canvas id="asciiCanvas"></canvas>
+    <div id="asciiArtContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
